@@ -1,0 +1,15 @@
+LVMs  attended may-2025
+how to check if yum update not happening
+kernel panic what to do
+iostat io how to check
+how to check the cpu load averages
+what is multipathing 
+if lvm dis is always issue what to do how will u fix it even from san
+physical memeory is full how will u fix it using swap how to list swap space and add from physical partition extend
+how to configure raid
+pvgroup means volume groups
+can we reduce a FS from XFS
+bonding from three nic to round robin
+check the speed in nic ethtool
+what is kernel parameters and how to check and configure
+
