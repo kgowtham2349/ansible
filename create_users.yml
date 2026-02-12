@@ -12,21 +12,21 @@
         name: user2
         state: present
     - name: open firewall port
-      ansible.posix.firewalld:
+      firewalld:
         port: 8080/tcp
         permanent: yes
         state: enabled
     - name: open firewall port for nfs
-      ansible.posix.firewalld:
+      firewalld:
         port: 2049/tcp
         permanent: yes
         state: enabled
     - name: allow service in firewall
-      ansible.posix.firewalld:
+      firewalld:
         service: nfs
         permanent: yes
         state: enabled
         
     - name: reload firewall
-      ansible.posix.firewalld:
-      state: reloaded
+      firewalld:
+        state: reloaded
