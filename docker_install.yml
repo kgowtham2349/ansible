@@ -5,5 +5,5 @@
    tasks:
      - name: install docker
        yum:
-         name: docker.io
+         name: podman
          state: present
