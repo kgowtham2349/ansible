@@ -1,6 +1,6 @@
 ---
- -name: to ping the inventory
- hosts: all
- tasks:
-  -name: test conn
-  ping:
+ - name: to ping the inventory
+   hosts: all
+   tasks:
+    - name: test conn
+      ping:
