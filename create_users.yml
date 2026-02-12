@@ -15,18 +15,18 @@
       firewalld:
         port: 8080/tcp
         permanent: yes
+        immediate: yes
         state: enabled
     - name: open firewall port for nfs
       firewalld:
         port: 2049/tcp
         permanent: yes
+        immediate: yes
         state: enabled
     - name: allow service in firewall
       firewalld:
         service: nfs
         permanent: yes
+        immediate: yes
         state: enabled
         
-    - name: reload firewall
-      firewalld:
-        state: restarted
