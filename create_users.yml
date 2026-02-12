@@ -1,0 +1,31 @@
+---
+ -name: create users
+  hosts: all
+  become: yes
+  tasks:
+    - name: create user1
+      useradd:
+        name: user1
+        state: present
+    - name: create user2
+      useradd:
+        name: user2
+        state: present
+    - name: open firewall port
+      firewallcmd:
+        port: 8080/tcp
+        permanent: yes
+        state: enabled
+    - name : open firewall port for nfs
+      firewallcmd:
+        port: 2049/tcp
+        permanent: yes
+        state: enabled
+    - name: allow service in firewall
+      firewallcmd:
+        service: nfs
+        permanent: yes
+        state: enabled
+    - name: reload firewall
+      firewalld:
+        state: reloaded
