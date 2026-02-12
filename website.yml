@@ -6,7 +6,7 @@
     - name: install nginx
       dnf:
        name: nginx
-       state: install
+       state: present
     - name: copy
       copy:
        src: files/index.html
