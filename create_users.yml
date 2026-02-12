@@ -1,8 +1,8 @@
 ---
- -name: create users
-  hosts: all
-  become: yes
-  tasks:
+ - name: create users
+   hosts: all
+   become: yes
+   tasks:
     - name: create user1
       useradd:
         name: user1
