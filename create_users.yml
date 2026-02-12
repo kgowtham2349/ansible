@@ -23,7 +23,7 @@
         state: enabled
     - name: allow service in firewall
       ansible.posix.firewalld:
-        name: nfs
+        service: nfs
         permanent: yes
         state: enabled
         
