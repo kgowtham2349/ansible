@@ -4,11 +4,11 @@
    become: yes
    tasks:
     - name: create user1
-      useradd:
+      user:
         name: user1
         state: present
     - name: create user2
-      useradd:
+      user:
         name: user2
         state: present
     - name: open firewall port
