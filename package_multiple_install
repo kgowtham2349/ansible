@@ -1,0 +1,13 @@
+---
+ - name: install packages
+  hosts: all
+  become: yes
+  tasks:
+   - name: install multiple packages using ansible biltin
+     ansible.builtin.packages:
+     name: "{{ item }}"
+     state: latest
+     loop:
+     - git
+     - vim
+     - python
