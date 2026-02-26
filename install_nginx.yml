@@ -1,6 +1,6 @@
 ---
  -name: install nginx
- host: all
+ hosts: all
  become: yes
  tasks:
   -name: install nginx
