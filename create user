@@ -7,3 +7,17 @@
    user:
    name: gowtham
    state: present
+  -name : create user using items
+    user:
+    name: "{{ item }}"
+    state: present
+   with_items:
+    - gowtham
+    - kumar
+  -name : create user using loop
+    user:
+    name: "{{ item }}"
+    state: present
+   loop:
+    - gowtham
+    - kumar 
